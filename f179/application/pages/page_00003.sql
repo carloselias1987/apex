@@ -1,0 +1,161 @@
+prompt --application/pages/page_00003
+begin
+--   Manifest
+--     PAGE: 00003
+--   Manifest End
+wwv_flow_api.component_begin (
+ p_version_yyyy_mm_dd=>'2020.10.01'
+,p_release=>'20.2.0.00.20'
+,p_default_workspace_id=>14984190965020922
+,p_default_application_id=>168
+,p_default_id_offset=>549730768964170283
+,p_default_owner=>'COOMECIPAR'
+);
+wwv_flow_api.create_page(
+ p_id=>3
+,p_user_interface_id=>wwv_flow_api.id(241537262230583780)
+,p_name=>'Datos Varios'
+,p_alias=>'DATOS-VARIOS'
+,p_step_title=>'Datos varios'
+,p_autocomplete_on_off=>'OFF'
+,p_javascript_code=>'var htmldb_delete_message=''"DELETE_CONFIRM_MSG"'';'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_last_updated_by=>'CMERLO'
+,p_last_upd_yyyymmddhh24miss=>'20210510085840'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(333013714574021752)
+,p_plug_name=>'Datos_varios'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(241611542942583752)
+,p_plug_display_sequence=>60
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_query_type=>'TABLE'
+,p_query_table=>'DATOS_VARIOS'
+,p_include_rowid_column=>false
+,p_is_editable=>false
+,p_plug_source_type=>'NATIVE_FORM'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+);
+wwv_flow_api.create_page_branch(
+ p_id=>wwv_flow_api.id(288405035690607313)
+,p_branch_action=>'f?p=&APP_ID.:2:&SESSION.::&DEBUG.&success_msg=#SUCCESS_MSG#'
+,p_branch_point=>'AFTER_PROCESSING'
+,p_branch_type=>'REDIRECT_URL'
+,p_branch_sequence=>1
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(333013454097021750)
+,p_name=>'P3_TIPO_DATO'
+,p_source_data_type=>'NUMBER'
+,p_is_required=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_item_source_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_prompt=>'Tipo Dato'
+,p_source=>'TIPO_DATO'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_NUMBER_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_api.id(241559734538583770)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_03=>'right'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(333013387329021749)
+,p_name=>'P3_NUMERO'
+,p_source_data_type=>'NUMBER'
+,p_is_required=>true
+,p_is_primary_key=>true
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_item_source_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_prompt=>'Numero'
+,p_source=>'NUMERO'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_NUMBER_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_api.id(241559734538583770)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_03=>'right'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(333013315641021748)
+,p_name=>'P3_DESCRIPCION'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_item_source_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_prompt=>'Descripcion'
+,p_source=>'DESCRIPCION'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_TEXTAREA'
+,p_cSize=>30
+,p_cMaxlength=>200
+,p_cHeight=>5
+,p_field_template=>wwv_flow_api.id(241559734538583770)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_01=>'Y'
+,p_attribute_02=>'N'
+,p_attribute_03=>'N'
+,p_attribute_04=>'BOTH'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(333013231130021747)
+,p_name=>'P3_ESTADO'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_item_source_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_prompt=>'Estado'
+,p_source=>'ESTADO'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_api.id(241559734538583770)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(333013093888021746)
+,p_name=>'P3_PERMISOS'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_item_source_plug_id=>wwv_flow_api.id(333013714574021752)
+,p_prompt=>'Permisos'
+,p_source=>'PERMISOS'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_cMaxlength=>20
+,p_field_template=>wwv_flow_api.id(241559734538583770)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_api.create_page_process(
+ p_id=>wwv_flow_api.id(333013545195021751)
+,p_process_sequence=>20
+,p_process_point=>'BEFORE_HEADER'
+,p_region_id=>wwv_flow_api.id(333013714574021752)
+,p_process_type=>'NATIVE_FORM_INIT'
+,p_process_name=>'Initialize form Datos ACL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+);
+wwv_flow_api.component_end;
+end;
+/
